@@ -32,7 +32,7 @@ module X
           error   = options.delete(:e)
           html_options = options.delete(:html){ Hash.new }
 
-          if xeditable?(object)
+          if xeditable?(object, method)
             model   = object.class.model_name.param_key
             nid     = options.delete(:nid)
             nested  = options.delete(:nested)

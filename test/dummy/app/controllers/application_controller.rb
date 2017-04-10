@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   # protect_from_forgery with: :exception
 
-  def xeditable? object = nil
+  def xeditable? object = nil, method = nil
     xeditable = params[:denied] ? false : true
     can?(:edit, object) and xeditable ? true : false
   end
