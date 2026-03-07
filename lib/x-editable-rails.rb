@@ -7,7 +7,7 @@ module X
     module Rails
       class Engine < ::Rails::Engine
         initializer 'x-editable-rails.view_helpers' do
-          ActionView::Base.send :include, ViewHelpers
+          ActionView::Base.include ViewHelpers
         end
       end
     end

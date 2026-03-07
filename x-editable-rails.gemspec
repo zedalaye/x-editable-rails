@@ -15,11 +15,12 @@ Gem::Specification.new do |spec|
 
   spec.files         = Dir["{lib,vendor}/**/*"] + ["LICENSE.txt", "README.md"]
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib", "vendor"]
 
   spec.add_dependency "railties"
+  spec.add_dependency "base64"
 
-  spec.add_development_dependency "rails", "~> 4.0"
+  spec.add_development_dependency "rails", ">= 7.0"
   spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "ostruct"
 end

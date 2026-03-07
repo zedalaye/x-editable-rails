@@ -32,7 +32,7 @@ module X
           source = File.read path
           source = ERB.new(source).result
           
-          result = YAML.load(source)
+          result = YAML.safe_load(source)
           result = {} if result.blank?
           
           result.with_indifferent_access
